@@ -12,7 +12,7 @@ export default class Game extends Component {
       head: {},
       tail: [],
     },
-    currentDirection: 'right',
+    currentDirection: 'left',
     die: false,
     score: 0,
     scoreFactor: 10,
@@ -194,6 +194,10 @@ export default class Game extends Component {
       case 40:
         currentDirection = 'down';
         break;
+      
+      case 19:
+        currentDirection = 'Pause';
+        break;  
     }
 
     const newState = {
